@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica+SC&display=swap');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('landscape-bg.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    font-family:  'IM Fell Double Pica SC', serif;
+}
+
+.header {
+    background-color: rgba(255, 255, 255, .4);
+    height: 75px;
+    display: flex;
+    gap: 5px;
+    border-bottom: 1px solid #575755;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 50px;
+}
+
+h1:hover {
+    font-size: 2.2rem;
+    color: rgb(92, 1, 1);
+}
+
+.main-content {
+    display: grid;
+    grid-column-gap: 3em;
+    grid-template-columns: 1fr 3fr;
+    padding: 3em 3em 9em;
+    justify-content: space-around;
+    height: calc(100vh - 150px);
+}
+
+.project-subsection, .tasks-subsection {
+    background-color: rgba(255, 255, 255, .4);
+    padding: 2rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.project-heading, .tasks-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h2:hover {
+    font-size: 1.8rem;
+    color: rgb(99, 3, 3); 
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    margin: 8px;
+    font-size: 1.8rem;
+}
+
+li:hover {
+    font-size: 2.0rem;
+    color: rgb(99, 3, 3);
+
+}
+
+.project-name, .task-name {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-name .material-icons, .task-name .material-icons {
+    font-size: 1.4rem;
+}
+
+
+.add-project-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 110;
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(5px);
+}
+
+
+.add-project-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 230px;
+    width: 30%;
+    background: rgba(255, 255, 255, .4);
+    border-radius: 10px;
+}
+
+
+#input-header {
+    display: flex;
+   gap: 9rem;
+}
+
+.add-project-menu-input {
+    border-radius: 10px;
+    border: 2px solid rgb(7, 7, 7);
+    padding: 1.2rem;
+    outline: none;
+    font-size: 1.4rem;
+    width: 250px;
+    height: 40px;
+    
+}
+
+.add-project-menu-buttons {
+    display: flex;
+   gap: 1.3rem;
+   margin-bottom: 1.8rem;
+}
+
+
+hr {
+    width: 100%;
+    border-color: black;
+    line-height: 1.5;
+}
+
+.add-task-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(255, 255, 255, .4);
+    backdrop-filter: blur(5px);
+}
+
+form {
+    margin-left: auto;
+    margin-right: auto;
+    height: 75vh;
+}
+.add-task-menu {
+    display: flex;
+    flex-direction: column;
+    font-size: 1rem;
+    text-align: start;
+    background-color: rgba(255, 255, 255, .4);
+    border-radius: 10px;
+    height: max-content;
+    width: max-content;
+    padding: 1rem 3rem;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid rgb(236, 239, 243);
+}
+
+.add-task-menu label,.add-task-menu div {
+    margin-top: 1.2rem;
+}
+
+.add-task-menu-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.add-task-menu-input {
+    border-radius: 10px;
+    border: 1px solid rgb(7, 7, 7);
+    outline: none;
+    height: 20px;
+    width: 100%;
+    padding: 1.2rem 1.3rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-top: 0.2rem;
+}
+
+.status-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.urgency {
+    height: 40px;
+    width: 80px;
+    border-radius: 10px;
+}
+
+#high-priority {
+    background-color: rgb(4, 250, 4);
+}
+
+#mid-priority {
+    background-color: rgb(253, 170, 15);
+}
+
+#low-priority {
+    background-color: rgb(250, 8, 8);
+}
+
+
+.add-task-buttons {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+    outline: none;
+    margin-top: 0.6rem;
+
+}
+
+
+#add-task-btn {
+    font-size: 1.4rem;
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 40px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+}
+
+.material-icons:hover {
+    color: rgb(99, 3, 3);
+    font-size: 2.0rem;
+    cursor: pointer;
+}
+
+
+footer {
+    height: 75px;
+    background-color: rgba(255, 255, 255, .2);
+    display: flex;
+    border-top: 1px solid #575755;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.footer-text:hover {
+    font-size: 1.7rem;
+    color: rgb(49, 1, 9);
+}
