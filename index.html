@@ -12,9 +12,11 @@
 <body>
     <header>
         <div class="header">
+            <div>
             <span class="material-icons">
             fact_check
             </span>
+            </div>
             <h1>GET SHIT DONE!!!</h1>
         </div>
     </header>
@@ -23,89 +25,85 @@
             <div class="project-subsection">
                 <div class="project-heading">
                     <h2>PROJECTS </h2>
-                    <span class="material-icons">
-                     add
+                    <span class="material-icons" data-new-project-button>
+                         add
                     </span>
                 </div>
                 <hr id="project-line">
-                <ul class="project-list">
-                    <li class="project-name">Project 1 <span class="material-icons">
-                        delete
-                        </span></li>
-                    <li class="project-name">Project 2 <span class="material-icons">
-                        delete
-                        </span></li>
-                    <li class="project-name">project 3 <span class="material-icons">
-                        delete
-                        </span></li>
+                <ul class="project-list" data-projects>
+                    
                 </ul>
             </div>
         </section>
         <section class="tasks-section">
-            <div class="tasks-subsection">
+            <div class="tasks-subsection" data-tasks-display-container>
                 <div class="tasks-heading">
-                    <h2> Project 1</h2>
-                    <span class="material-icons">
+                    <h2 data-task-title> Project 1</h2>
+                    <span class="material-icons" data-new-task-button>
                         add
                     </span>
                 </div>  
                 <hr id="task-line">
-                <ul class="task-list">
-                    <li class="task-name">Task 1 <span class="material-icons">
-                        delete
-                        </span></li>
-                    <li class="task-name">Task 2 <span class="material-icons">
-                        delete
-                        </span></li>
-                    <li class="task-name">Task 3 <span class="material-icons">
-                        delete
-                        </span></li>
+                <ul class="task-list" data-tasks>
+                    <li class="task-name" data-tasklist-item>
+                        <div>
+                            <span class="material-icons-outlined">
+                            check_circle
+                            </span>
+                            <span>
+                                Task 1
+                            </span>
+                        </div>
+                        <span class="material-icons">
+                            delete
+                        </span>
+                    </li>
                 </ul>
             </div>
         </section>
-        <section class="add-project-container">
+        <section class="add-project-container" data-new-project-container>
             <div class="add-project-menu">
                 <div id="input-header">
                     <h2 class="add-project-menu-header">
                     New Project
                     </h2>      
-                    <span class="material-icons">
+                    <span class="material-icons" data-new-project-clear-btn>
                     clear
                     </span>
                 </div>
-                <div class="add-project-menu-buttons">
-                    <input type="text" class="add-project-menu-input" placeholder="Name...">
+                <div class="add-project-menu-buttons" data-new-project-form>
+                    <input type="text" class="add-project-menu-input" data-new-project-input  placeholder="Name...">
                     <span class="material-icons">
                         add
                     </span>
                 </div>
             </div>
         </section>
-        <section class="add-task-container">
-            <form>
+        <section class="add-task-container" data-new-tasks-container>
+            <form data-new-task-form>
                 <div class="add-task-menu">
-                    <h2 class="add-task-menu-header">New Task  <span class="material-icons">
+                    <h2 class="add-task-menu-header">New Task  <span class="material-icons" data-close-task-form>
                         clear
                         </span></h2>
                     <label for="task-title">
                         TITLE 
-                    <input type="text" class="add-task-menu-input" id="task-title" placeholder="Task Title...">
+                    <input type="text" data-new-task-title class="add-task-menu-input" id="task-title" placeholder="Task Title...">
                     </label>
                     <label for="task-desc">
                         DESCRIPTION 
-                    <input type="text" class="add-task-menu-input" id="task-desc" placeholder="Desc...">
+                    <input type="text" data-new-task-desc class="add-task-menu-input" id="task-desc" placeholder="Desc...">
                     </label>
-                    <div class="status-container">
+                    <div class="status-container" data-new-task-priority>
                         <div class="urgency" id="high-priority"></div>
                         <div class="urgency" id="mid-priority"></div>
                         <div class="urgency" id="low-priority"></div>
                     </div>
                     <label for="task-date">
                         DATE
-                    <input type="date" class="add-task-menu-input" id="task-date" placeholder="Name...">
+                    <input type="date" data-new-task-date class="add-task-menu-input" id="task-date" placeholder="Name...">
                     </label>
                     <div class="add-task-menu_buttons">
-                        <button class="add-task-buttons">
+                        <button class="add-task-buttons" data-new-task-addbtn >
                             <span id="add-task-btn" class="material-icons">
                                 add
                             </span>
